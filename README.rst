@@ -11,7 +11,7 @@ Testing a browserview is(not) a frontend
 Examples
 --------
 
-In a browserview's python code, you can using below code
+In a browserview's python code, you can using below code::
 
     from plone import api
 
