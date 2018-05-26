@@ -6,34 +6,18 @@
 mingtak.isFrontend
 ==================
 
-Tell me what your product does
-
-Features
---------
-
-- Can be bullet points
-
+Testing a browserview is(not) a frontend
 
 Examples
 --------
 
-This add-on can be seen in action at the following sites:
-- Is there a page on the internet where everybody can see the features?
+In a browserview's python code, you can using below code
 
+from plone import api
 
-Documentation
--------------
-
-Full documentation for end users can be found in the "docs" folder, and is also available online at http://docs.plone.org/foo/bar
-
-
-Translations
-------------
-
-This product has been translated into
-
-- Klingon (thanks, K'Plai)
-
+isFrontendView = api.content.get_view(name='is_frontend', context=context, request=request)
+return isFrontendView(self.view)
+# if self.view is a frontend view, return True, else False
 
 Installation
 ------------
@@ -56,15 +40,6 @@ Contribute
 
 - Issue Tracker: https://github.com/collective/mingtak.isFrontend/issues
 - Source Code: https://github.com/collective/mingtak.isFrontend
-- Documentation: https://docs.plone.org/foo/bar
-
-
-Support
--------
-
-If you are having issues, please let us know.
-We have a mailing list located at: project@example.com
-
 
 License
 -------
