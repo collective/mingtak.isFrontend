@@ -13,11 +13,14 @@ Examples
 
 In a browserview's python code, you can using below code
 
-from plone import api
+    from plone import api
 
-isFrontendView = api.content.get_view(name='is_frontend', context=context, request=request)
-return isFrontendView(self.view)
-# if self.view is a frontend view, return True, else False
+    isFrontendView = api.content.get_view(name='is_frontend', context=context, request=request)
+
+    return isFrontendView(self.view)
+
+    # if self.view is a frontend view, return True, else False
+
 
 Installation
 ------------
